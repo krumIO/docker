@@ -83,12 +83,12 @@ jobs:
         with:
           context: ./
           file: ./Dockerfile
-          push: false
+          push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/calendso:latest
-            docker.io/calcom/cal.com:latest
-            ghcr.io/calcom/web:latest
+            docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/calendso:canary
+            docker.io/calcom/cal.com:canary
+            ghcr.io/calcom/web:canary
           build-args: |
             NEXT_PUBLIC_WEBAPP_URL=${{ env.NEXT_PUBLIC_WEBAPP_URL }}
             NEXT_PUBLIC_LICENSE_CONSENT=${{ env.NEXT_PUBLIC_LICENSE_CONSENT }}
