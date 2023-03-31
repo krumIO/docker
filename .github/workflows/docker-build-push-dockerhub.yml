@@ -96,7 +96,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/arm64
           tags: |
             docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/calendso:canary
             docker.io/calcom/cal.com:canary
